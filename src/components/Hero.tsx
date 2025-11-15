@@ -40,17 +40,17 @@ export default function Hero() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20 text-center">
       <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-6 leading-tight">
-        Boost your <Rocket className="inline-block w-12 h-12 md:w-14 md:h-14 text-[#f27d33] mx-2" /> productivity
+        Launch your idea
         <br />
-        without the overwhelm.
-      </h1>
+        without the confusion.
+      </h1> 
 
       <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-        Imagine your tasks running themselves. With Flowline, centralize operations,
-        ditch tedious work, and free your team to innovate and grow.
+        Imagine your startup building itself. With Krowe, simplify every step, cut the confusion, 
+        and focus on launching your idea faster.
       </p>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+   {/*   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
         <button className="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium transition-colors">
           Learn how
         </button>
@@ -58,26 +58,12 @@ export default function Hero() {
           Experience Effortless Efficiency
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
-      </div>
-
-      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 mb-16">
-        <div className="flex items-center gap-2">
-          <CheckCircle className="w-4 h-4" />
-          <span>Quick setup</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Shield className="w-4 h-4" />
-          <span>GDPR compliant</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Lock className="w-4 h-4" />
-          <span>ISO27001</span>
-        </div>
-      </div>
+      </div> */}
 
       <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl p-8 border-2 border-[#f27d33]/20">
         <h3 className="text-2xl font-bold text-gray-800 mb-2">Join the Waitlist</h3>
-        <p className="text-gray-600 mb-6">Be the first to experience effortless productivity.</p>
+        <p className="text-gray-600 mb-6">Be the first to experience the simplest way to launch a startup.</p>
+
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
