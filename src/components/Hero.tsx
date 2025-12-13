@@ -1,11 +1,6 @@
 import { useState } from 'react';
-import { supabase } from '../lib/supabase';
-
 export default function Hero() {
-  const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
-  const [success, setSuccess] = useState(false);
+  const [loading] = useState(false);
   const waitlistFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScDZyg4ZXbwFoyQ62WcXL6RonKNlVsjdCbesFV4BkjcIUMWSQ/viewform?usp=dialog';
 
   return (
