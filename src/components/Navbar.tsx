@@ -1,19 +1,36 @@
-// import Link from "next/link"; // Removed: next/link is not supported in Vite
+import { MouseEvent } from 'react';
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Resources", href: "/resources" },
+  { label: "Home", href: "#home" },
+  { label: "Features", href: "#features" },
+  { label: "How it Works", href: "#how-it-works" },
+  { label: "Why Krowe?", href: "#why-krowe" },
 ];
 
 export default function Navbar() {
+  const handleScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      // Adjust this value to change the scroll offset
+      const offset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
-    <header className="w-full py-4">
-      <nav className="sticky top-4 z-50 mx-auto max-w-5xl px-4 w-full">
+    <header className="w-full py-4 fixed top-0 left-0 right-0 z-50 pointer-events-none">
+      <nav className="mx-auto max-w-5xl px-4 w-full pointer-events-auto">
         <div className="bg-surface-light backdrop-blur-md bg-opacity-80 border border-gray-200 rounded-full px-6 py-3 shadow-soft flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <a>
+            <a href="#home" onClick={(e) => handleScroll(e, '#home')} className="cursor-pointer">
               <img src="KroweLogo.png" alt="Krowe Logo" width={100} height={100} />
             </a>
           </div>
@@ -22,7 +39,8 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-primary transition-colors"
+                onClick={(e) => handleScroll(e, link.href)}
+                className="hover:text-primary transition-colors cursor-pointer"
               >
                 {link.label}
               </a>
@@ -31,13 +49,13 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="hidden md:block text-sm font-semibold hover:text-primary transition-colors text-text-light "
+              className="hidden md:block text-sm font-semibold hover:text-primary transition-colors text-text-light cursor-pointer"
             >
               Sign in
             </a>
             <a
               href="#"
-              className="bg-text-light text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="bg-text-light text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity cursor-pointer"
             >
               Get Started
             </a>
