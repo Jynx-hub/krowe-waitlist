@@ -17,7 +17,10 @@ export default function Hero() {
             Krowe gives young founders the data-driven insights needed to convert chaos into clarity. Validate product-market fit faster than ever.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
-            <button className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-primary/30 transition-all flex items-center justify-center">
+            <button className="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-primary/30 transition-all flex items-center justify-center"
+              type="button"
+              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScDZyg4ZXbwFoyQ62WcXL6RonKNlVsjdCbesFV4BkjcIUMWSQ/viewform?usp=header", "_blank", "noopener, noreferrer")}
+            >
               Join the Waitlist
             </button>
             <button className="bg-white text-navy border border-slate-200 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all flex items-center justify-center space-x-2">
@@ -42,7 +45,14 @@ export default function Hero() {
           </div> */}
         </div>
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 items-start lg:block lg:h-[700px] lg:w-full lg:pl-10">
-          <div className="glass p-8 rounded-[32px] shadow-xl card-shadow flex flex-col h-full lg:h-auto border-white/20 lg:absolute lg:w-[45%] lg:top-20 lg:left-0 lg:z-20 lg:-rotate-3 hover:lg:rotate-0 transition-transform duration-300">
+
+          {/* Central Icon */}
+          <div className="hidden lg:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 items-center justify-center">
+            <div className="absolute w-56 h-56 bg-primary/40 blur-[80px] rounded-full pointer-events-none"></div>
+            <img src="/KroweIcon.svg" alt="Krowe Logo" className="w-64 h-64 relative" />
+          </div>
+
+          <div className="glass p-8 rounded-[32px] shadow-xl shadow-card flex flex-col h-full lg:h-auto border-white/20 lg:absolute lg:w-[45%] lg:top-20 lg:left-0 lg:z-20 lg:-rotate-6 hover:lg:rotate-0 transition-transform duration-300 transform scale-75 origin-center">
             <div className="flex justify-between items-start mb-6">
               <span className="bg-orange-100 text-primary text-[60%] font-bold px-2.5 py-1 rounded-full uppercase tracking-tighter">Current Idea</span>
               <span className="material-symbols-outlined text-slate-300">more_horiz</span>
@@ -58,7 +68,8 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="glass p-8 rounded-[32px] shadow-xl card-shadow border-white/20 lg:absolute lg:w-[48%] lg:top-12 lg:right-0 lg:z-10 lg:rotate-2 hover:lg:rotate-0 transition-transform duration-300">
+
+          <div className="glass p-8 rounded-[32px] shadow-xl shadow-card border-white/20 lg:absolute lg:w-[48%] lg:top-12 lg:right-0 lg:z-10 lg:rotate-6 hover:lg:rotate-0 transition-transform duration-300 transform scale-75 origin-center">
             <div className="flex justify-between items-center mb-10">
               <h4 className="font-bold text-slate-500 text-sm uppercase tracking-wide">Time Till Launch</h4>
             </div>
@@ -84,7 +95,8 @@ export default function Hero() {
               <p className="text-xs text-slate-500 font-medium text-center">Ready to launch Krowe!</p>
             </div>
           </div>
-          <div className="glass p-8 rounded-[32px] shadow-xl card-shadow border-white/20 lg:absolute lg:w-[42%] lg:bottom-10 lg:left-12 lg:z-30 lg:rotate-2 hover:lg:rotate-0 transition-transform duration-300">
+
+          <div className="glass p-8 rounded-[32px] shadow-xl shadow-card border-white/20 lg:absolute lg:w-[42%] lg:bottom-10 lg:left-12 lg:z-30 lg:rotate-3 hover:lg:rotate-0 transition-transform duration-300 transform scale-75 origin-center">
             <div className="flex justify-between mb-4">
               <span className="text-sm font-bold">Streak</span>
               <span className="material-symbols-outlined text-primary fill-current">local_fire_department</span>
@@ -104,7 +116,8 @@ export default function Hero() {
             </div>
             <p className="text-[11px] text-slate-400 font-medium">1 more day to hit your next badge!</p>
           </div>
-          <div className="glass p-8 rounded-[32px] shadow-xl card-shadow border-white/20 lg:absolute lg:w-[40%] lg:bottom-20 lg:right-8 lg:z-10 lg:-rotate-3 hover:lg:rotate-0 transition-transform duration-300">
+
+          <div className="glass p-8 rounded-[32px] shadow-xl shadow-card border-white/20 lg:absolute lg:w-[40%] lg:bottom-20 lg:right-8 lg:z-10 lg:-rotate-3 hover:lg:rotate-0 transition-transform duration-300 transform scale-75 origin-center">
             <div className="flex flex-col items-center">
               <div className="relative w-32 h-32 flex items-center justify-center mb-6">
                 <svg className="w-full h-full transform -rotate-90">

@@ -12,9 +12,9 @@ export default {
                 "navy": "#0f172a", // Added for new Hero
             },
             fontFamily: {
-                sans: ["Inter", "sans-serif"],
-                display: ["Outfit", "sans-serif"], // Added for new Hero
-                outfit: ["Outfit", "sans-serif"],   // Added for new Hero
+                sans: ["Avenir", "sans-serif"],
+                display: ["Avenir", "sans-serif"], // Added for new Hero
+                outfit: ["Avenir", "sans-serif"],   // Added for new Hero
             },
             borderRadius: {
                 DEFAULT: "0.75rem",
