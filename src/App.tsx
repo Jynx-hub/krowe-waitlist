@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import { Hero } from './components/Hero';
 import Features from './components/Features';
 import Why from './components/Why';
 import Timeline from './components/Timeline';
