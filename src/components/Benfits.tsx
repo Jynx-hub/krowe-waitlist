@@ -148,14 +148,14 @@ export default function DecisionConsoleBenefits() {
     }, [])
 
     return (
-        <section className="w-full py-24 md:py-32 bg-background">
+        <section id="benefits" className="w-full py-24 md:py-32 bg-background">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4">
+                    <span className="inline-block text-xs font-extrabold tracking-[0.3em] uppercase text-primary mb-4">
                         Benefits
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold tracking-tight text-foreground mb-4">
                         Stop guessing. Get a clear direction.
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
